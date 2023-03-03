@@ -4,8 +4,6 @@ import { TRoutesInput } from "../types/routes"
 import express from "express"
 const app: express.Application = express()
 
-const userRoute = 9
-
 app.post("/api/user", async (req, res) => {
   const user = await UserController.CreateUser({
     firstName: req.body.firstName,
@@ -15,5 +13,3 @@ app.post("/api/user", async (req, res) => {
 
   return res.send({ user })
 })
-
-export default userRoute
