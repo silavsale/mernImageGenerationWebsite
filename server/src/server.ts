@@ -2,7 +2,7 @@
 import express from "express"
 import * as dotenv from "dotenv"
 import morganMiddleware from "./config/morganMiddleware"
-import connect from "./db/mongodb"
+// import connect from "./db/mongodb"
 import cors from "cors"
 import bodyParser from "body-parser"
 import routes from "./routes"
@@ -28,5 +28,5 @@ app.listen(PORT, () => {
   console.log(`Server is up and running @ http://localhost:${PORT}`)
 })
 
-connect({ db })
+// connect({ db })
 routes({ app })
